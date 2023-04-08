@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="./home.css" />
+  
+    <title>(EM PROGRESSO) Formulário</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <h2>Bem vindo(a)
+          <div class="Nome">
+            <label>
+              <span type="text" id="username" ></span>
+            </label>
+          </div>
+      </h2> 
+    </div>
+
+      <form id="homeform" class="homeform">
+
+        <div class="real">
+          <label>R$</label>
+            <div class="saldo">
+              <label><span type="text" id="saldo" ></span></label>
+            </div>
+        </div>
+        
+
+        <div class="form-control">
+          <label for="Trans_email">Transferencia para o e-mail</label>
+          <input type="text" id="email" placeholder="Transferir para o e-mail@.com" />
+          <i class="fas fa-exclamation-circle"></i>
+          <i class="fas fa-check-circle"></i>
+          <small>Mensagem de erro</small>
+        </div>
+
+        <div class="form-control">
+          <label for="valor">R$</label>
+          <input
+            type="text"
+            id="valor"
+            placeholder="Insira o valor da transferencia"
+          />
+          <i class="fas fa-exclamation-circle"></i>
+          <i class="fas fa-check-circle"></i>
+          <small>Mensagem de erro</small>
+        </div>
+
+        <button type="button" value="enviar" onclick="enviar ()" id="btn-enviar">Transferir</button>
+        
+        <button type="button" value="LimparHome" onclick="limparHome ()" id="btn-limparHome">Limpar</button>
+
+        <button type="button" value="Logout" onclick="logout ()" id="btn-logout">Sair</button>
+
+        <button type="button" value="Delet" onclick="delet ()" id="btn-delet">Excluir conta</button>
+        
+    </form>
+    </div>
+  
+    
+    <script src="https://www.gstatic.com/firebasejs/9.17.1/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.17.1/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.17.1/firebase-firestore-compat.js"></script>
+    <script src="../../firestore.js"></script>
+    <script src="./home.js"></script>
+  </body>
+</html>

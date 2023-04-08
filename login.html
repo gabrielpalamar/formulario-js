@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <link rel="stylesheet" href="./login.css" />  
+  
+    <title>(EM PROGRESSO) Formulário</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <h2>Login</h2>
+      </div>
+
+      <form id="form" class="form">
+
+        <div class="form-control">
+          <label for="email">Email</label>
+          <input type="text" id="email" placeholder="Digite seu email.." />
+          <i class="fas fa-exclamation-circle"></i>
+          <i class="fas fa-check-circle"></i>
+          <small>Mensagem de erro</small>
+        </div>
+
+        <div class="form-control">
+          <label for="password">Senha</label>
+          <input
+            type="password"
+            id="password"
+            placeholder="Digite sua senha..."
+          />
+          <i class="fas fa-exclamation-circle"></i>
+          <i class="fas fa-check-circle"></i>
+          <small>Mensagem de erro</small>
+        </div>
+
+        <button type="submit" value="login" onclick="login ()" id="btn-login">Entrar</button>
+        
+        <button type="submit" value="cadastro" onclick="cadastro ()" id="btn-cadastro">Cadastro</button>
+        
+        <button type="submit" value="recuperar" onclick="recupera ()" id="btn-recuperar">recuperar senha</button>
+
+        <button type="submit" value="limpar" onclick="limparLogin ()" id="btn-limpar">limpar</button>
+    </form>
+    </div>
+  
+
+    <script src="./login.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.17.1/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.17.1/firebase-auth-compat.js"></script>
+    <script src="firebase.js"></script>
+  </body>
+</html>
